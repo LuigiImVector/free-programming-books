@@ -15,6 +15,7 @@
 * [Assembly Language](#assembly-language)
   * [Non-X86](#non-x86)
 * [AutoHotkey](#autohotkey)
+* [AutoIt](#autoit)
 * [Autotools](#autotools)
 * [Awk](#awk)
 * [Bash](#bash)
@@ -90,7 +91,7 @@
   * [Spring Security](#spring-security)
   * [Wicket](#wicket)
 * [JavaScript](#javascript)
-  * [Angular.js](#angularjs)
+  * [AngularJS](#angularjs)
   * [Aurelia](#aurelia)
   * [Backbone.js](#backbonejs)
   * [Booty5.js](#booty5js)
@@ -470,7 +471,7 @@
 
 #### Game Development
 
-* [2D Game Development: From Zero To Hero](https://github.com/Penaz91/2DGD_F0TH) (:construction: *in process*)
+* [2D Game Development: From Zero To Hero](https://github.com/Penaz91/2DGD_F0TH) - Daniele Penazzo (HTML, [PDF, EBPUB, Kindle...](https://therealpenaz91.itch.io/2dgd-f0th#download)) (:construction: *in process*)
 * [Coding With Minecraft](https://turtleappstore.com/book/) - Al Sweigart
 * [Designing Virtual Worlds](https://mud.co.uk/richard/DesigningVirtualWorlds.pdf) - Richard A. Bartle (PDF)
 * [Game AI Pro](http://www.gameaipro.com) - Steve Rabin
@@ -544,6 +545,7 @@
 * [A First Course in Linear Algebra](http://linear.ups.edu) - Rob Beezer
 * [A Friendly Introduction to Mathematical Logic](https://milneopentextbooks.org/a-friendly-introduction-to-mathematical-logic/) - Christopher C. Leary and Lars Kristiansen
 * [A Gentle Introduction to the Art of Mathematics](https://osj1961.github.io/giam/) - Joseph E. Fields
+* [A Programmer's Introduction to Mathematics](https://pimbook.org) - Jeremy Kun
 * [Abstract Algebra: Theory and Applications](http://abstract.ups.edu) - Tom Judson
 * [Active Calculus](https://scholarworks.gvsu.edu/books/20/) - Matt Boelkins
 * [Advanced Algebra](http://www.math.stonybrook.edu/~aknapp/download/a2-alg-inside.pdf) - Anthony W. Knapp (PDF)
@@ -866,7 +868,6 @@ Kerridge (PDF) (email address *requested*, not required)
 #### Search Engines
 
 * [Elasticsearch: The Definitive Guide](https://www.elastic.co/guide/en/elasticsearch/guide/current/index.html) ([fork it on GH](https://github.com/elastic/elasticsearch-definitive-guide))
-* [Exploring Elasticsearch](http://exploringelasticsearch.com)
 * [Solr for newbies workshop (2019)](https://github.com/hectorcorrea/solr-for-newbies) - Hector Correa ([PDF](https://github.com/hectorcorrea/solr-for-newbies/blob/master/tutorial.pdf))
 
 
@@ -1092,6 +1093,11 @@ Kerridge (PDF) (email address *requested*, not required)
 * [AutoHotkey Official Documentation](https://autohotkey.com/docs/AutoHotkey.htm) ([CHM](https://autohotkey.com/download/1.1/AutoHotkeyHelp.zip))
 
 
+### AutoIt
+
+* [AutoIt Docs](https://www.autoitscript.com/autoit3/docs/) - Jonathan Bennett (HTML)
+
+
 ### Autotools
 
 * [Autotools Mythbuster](https://autotools.io/index.html)
@@ -1160,7 +1166,7 @@ Kerridge (PDF) (email address *requested*, not required)
 * [C for Python Programmers - Carl Burch](http://www.toves.org/books/cpy/)
 * [C Notes for Professionals](https://goalkicker.com/CBook) - Compiled from StackOverflow Documentation (PDF)
 * [C Programming](https://en.wikibooks.org/wiki/Programming%3AC) - Wikibooks
-* [C Programming Boot Camp - Paul Gribble](http://www.gribblelab.org/CBootCamp/)
+* [C Programming Boot Camp - Paul Gribble](https://gribblelab.org/teaching/CBootCamp/)
 * [Deep C](http://www.slideshare.net/olvemaudal/deep-c)
 * [Essential C](http://cslibrary.stanford.edu/101/EssentialC.pdf) - Nick Parlante (PDF)
 * [Everything you need to know about pointers in C - Peter Hosey](http://boredzo.org/pointers/)
@@ -1835,19 +1841,22 @@ Kerridge (PDF) (email address *requested*, not required)
 * [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS) - Kyle Simpson (HTML, PDF, EPUB, MOBI)
 
 
-#### Angular.js
+#### AngularJS
 
-* [Angular for the jQuery developer](http://www.ng-newsletter.com.s3-website-us-east-1.amazonaws.com/posts/angular-for-the-jquery-developer.html)
-* [Angular.js Guide](https://docs.angularjs.org/guide/)
-* [Angular.js Material Designing](https://material.angularjs.org/latest/)
-* [Angular.js Style Guide](https://github.com/toddmotto/angularjs-styleguide)
-* [Angular.js Tutorial](https://docs.angularjs.org/tutorial)
-* [AngularJS - Step by Logical Step](http://nicholasjohnson.com/angular-book/)
-* [AngularJS Notes for Professionals](https://goalkicker.com/AngularJSBook) - Compiled from StackOverflow Documentation (PDF)
-* [AngularJS Succinctly](https://www.syncfusion.com/resources/techportal/ebooks/angularjs) (PDF, Kindle) (email address *requested*, not required)
-* [AngularJs vs EmberJs](http://angularjs-emberjs-compare.bguiz.com)
-* [Seven-Part Introduction to Angular](http://ngokevin.com/blog/angular-1/)
-* [Unit Testing Best Practices in AngularJS](http://andyshora.com/unit-testing-best-practices-angularjs.html)
+> :information_source: See also &#8230; [Angular](#angular)
+
+* [Angular 1 Style Guide](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md) - John Papa (HTML)
+* [Angular for the jQuery developer](http://www.ng-newsletter.com.s3-website-us-east-1.amazonaws.com/posts/angular-for-the-jquery-developer.html) - ng-newsletter, Ari Lerner, David Wu, Nate Murray (HTML)
+* [AngularJS - Step by Logical Step](http://nicholasjohnson.com/angular-book/) - Nicholas Johnson (HTML)
+* [AngularJS Guide](https://docs.angularjs.org/guide/) (HTML)
+* [AngularJS Material Designing](https://material.angularjs.org/latest/) (HTML)
+* [AngularJS Notes for Professionals](https://goalkicker.com/AngularJSBook) - Compiled from StackOverflow Documentation ([PDF](https://goalkicker.com/AngularJSBook/AngularJSNotesForProfessionals.pdf))
+* [AngularJS Style Guide for teams](https://github.com/toddmotto/angularjs-styleguide) - Todd Motto (HTML)
+* [AngularJS Succinctly](https://www.syncfusion.com/resources/techportal/ebooks/angularjs) - Frederik Dietz (PDF, EPUB, Kindle) (email address *requested*, not required)
+* [AngularJS Tutorial](https://docs.angularjs.org/tutorial) (HTML)
+* [AngularJS vs EmberJs](https://angularjs-emberjs-compare.bguiz.com) - Brendan Graetz (HTML, [PDF, EBOOK, Kindle](https://leanpub.com/angularjs-emberjs-compare)) (Leanpub account / email address *not required*)
+* [Seven-Part Introduction to AngularJS](http://ngokevin.com/blog/angular-1/) - Keving Ngo (HTML, [:package: demos, open-sourced examples](https://github.com/ngokevin/angularbook))
+* [Unit Testing Best Practices in AngularJS](http://andyshora.com/unit-testing-best-practices-angularjs.html) - Andy Shora (HTML)
 
 
 #### Aurelia
@@ -1897,7 +1906,7 @@ Kerridge (PDF) (email address *requested*, not required)
 
 #### Ember.js
 
-* [AngularJs vs EmberJs](http://angularjs-emberjs-compare.bguiz.com)
+* [AngularJs vs EmberJs](https://angularjs-emberjs-compare.bguiz.com) - Brendan Graetz (HTML, [PDF, EPUB, Kindle](https://leanpub.com/angularjs-emberjs-compare)) (Leanpub account / email address *not required*)
 * [DockYard Ember.js Style Guide](https://github.com/DockYard/styleguides/blob/master/engineering/ember.md)
 * [Ember App with RailsApi](https://dockyard.com/blog/ember/2013/01/07/building-an-ember-app-with-rails-api-part-1)
 * [Ember.js - Getting started](https://guides.emberjs.com/release/)
@@ -1959,8 +1968,8 @@ Kerridge (PDF) (email address *requested*, not required)
 * [Learning React.js: Getting Started and Concepts](https://scotch.io/tutorials/learning-react-getting-started-and-concepts)
 * [React-Bits](https://github.com/vasanthk/react-bits)
 * [React Book, your beginner guide to React](https://github.com/softchris/react-book/) - Chris Noring
-* [React Enlightenment](https://www.gitbook.com/book/frontendmasters/react-enlightenment/details)
-* [React In-depth: An exploration of UI development](https://www.gitbook.com/book/developmentarc/react-indepth/details)
+* [React Enlightenment](https://www.reactenlightenment.com)
+* [React In-depth: An exploration of UI development](https://developmentarc.gitbooks.io/react-indepth/content/)
 * [React JS Notes for Professionals](https://goalkicker.com/ReactJSBook/) - Compiled from StackOverflow Documentation (PDF)
 * [React Primer Draft](https://github.com/mikechau/react-primer-draft)
 * [React Succinctly](https://www.syncfusion.com/ebooks/react-succinctly) - Samer Buna
@@ -2119,6 +2128,7 @@ Kerridge (PDF) (email address *requested*, not required)
 
 ### Make
 
+* [Makefile tutorial](https://makefiletutorial.com) - Chase Lambert
 * [Managing Projects with GNU Make](https://www.oreilly.com/openbook/make3/book/index.html) - Robert Mecklenburg
 
 
@@ -2995,9 +3005,14 @@ Kerridge (PDF) (email address *requested*, not required)
 
 #### Angular
 
-* [Angular 2+ Notes for Professionals](https://goalkicker.com/Angular2Book/) - Compiled from StackOverflow documentation (PDF)
-* [Angular Docs](https://angular.io/docs)
-* [Build a Full-Stack Web Application Using Angular & Firebase](https://www.c-sharpcorner.com/ebooks/build-a-full-stack-web-application-using-angular-and-firebase) - Ankit Sharma
+> :information_source: See also &#8230; [AngularJS](#angularjs)
+
+* [Angular 2 Style Guide](https://github.com/johnpapa/angular-styleguide/blob/master/a2/README.md) - John Papa (HTML)
+* [Angular 2+ Notes for Professionals](https://goalkicker.com/Angular2Book/) - Compiled from StackOverflow documentation ([PDF](https://goalkicker.com/Angular2Book/Angular2NotesForProfessionals.pdf))
+* [Angular Docs](https://angular.io/docs) (HTML)
+* [Angular Material](https://material.angular.io/guide) (HTML)
+* [Angular Tutorial](https://angular.io/tutorial) (HTML)
+* [Build a Full-Stack Web Application Using Angular & Firebase](https://www.c-sharpcorner.com/ebooks/build-a-full-stack-web-application-using-angular-and-firebase) - Ankit Sharma (PDF, [:package: code samples](https://github.com/AnkitSharma-007/blogging-app-with-Angular-CloudFirestore))
 
 
 #### Deno

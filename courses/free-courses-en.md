@@ -2,8 +2,8 @@
 
 * [Algorithms & Data Structures](#algorithms--data-structures)
 * [Android](#android)
-* [Angular](#angular)
 * [Assembly](#assembly)
+* [AutoIt](#autoit)
 * [Bash / Shell](#bash--shell)
 * [Bootstrap](#bootstrap)
 * [C](#c)
@@ -28,9 +28,8 @@
 * [iOS](#ios)
 * [Java](#java)
 * [JavaScript](#javascript)
-  * [Angular.js](#angularjs)
+  * [AngularJS](#angularjs)
   * [D3.js](#d3js)
-  * [DenoJS](#denojs)
   * [jQuery](#jquery)
   * [Next.js](#nextjs)
   * [NodeJS](#nodejs)
@@ -65,6 +64,8 @@
   * [Vapor](#vapor)
 * [Theory](#theory)
 * [TypeScript](#typescript)
+  * [Angular](#angular)
+  * [Deno](#deno)
 * [Verilog / VHDL / SystemVerilog](#verilog--vhdl--systemverilog)
 * [Web Development](#web-development)
 
@@ -118,20 +119,16 @@
 * [Programming Mobile Services for Android Handheld Systems: Concurrency](https://www.coursera.org/course/posaconcurrency)
 
 
-### Angular
-
-* [Angular 6 Tutorials](https://www.youtube.com/playlist?list=PLYxzS__5yYQlqCmHqDyW3yo5V79C7eaTe) - codedamn (YouTube)
-* [Angular Courses](https://www.youtube.com/playlist?list=PLTjRvDozrdlxAhsPP4ZYtt3G8KbJ449oT) - Programming with Mosh
-* [Angular Fast Crash Course](https://www.udemy.com/angular-fast-crash-course/) - Edwin Diaz, Coding Faculty Solutions (Udemy)
-* [Angular for Beginners](https://www.udemy.com/course/angular-for-beginners-course/) - Angular University (Udemy)
-* [Angular Tutorial For Beginners](https://www.youtube.com/playlist?list=PLC3y8-rFHvwhBRAgFinJR8KHIrCdTkZcZ) - Codevolution (YouTube)
-
-
 ### Assembly
 
 * [Binary Exploitation / Memory Corruption by LiveOverflow](https://www.youtube.com/playlist?list=PLhixgUqwRTjxglIswKp9mpkfPNfHkzyeN) - LiveOverflow
 * [Introduction To Reverse Engineering Software](http://opensecuritytraining.info/IntroductionToReverseEngineering.html)
 * [Introductory Intel x86: Architecture, Assembly, Applications, & Alliteration](http://opensecuritytraining.info/IntroX86.html)
+
+
+### AutoIt
+
+* [AutoIt Scripting Tutorial](https://www.youtube.com/playlist?list=PL4Jcq5zn02jKpjX0nqI1_fS7mEEb5tw6z) - TutsTeach (HTML)
 
 
 ### Bash / Shell
@@ -391,7 +388,7 @@
 * [Beginner's Series to: JavaScript](https://youtube.com/playlist?list=PLlrxD0HtieHhW0NCG7M536uHGOtJ95Ut2) - Microsoft Developer (YouTube)
 * [Bento JavaScript Learning Track](https://bento.io/topic/javascript) (Bento)
 * [Egghead.io](https://egghead.io)
-* [ES6 and Typescript Tutorial](https://www.youtube.com/playlist?list=PLC3y8-rFHvwhI0V5mE9Vu6Nm-nap8EcjV) - Codevolution
+* [ES6 and Typescript Tutorial](https://www.youtube.com/playlist?list=PLC3y8-rFHvwhI0V5mE9Vu6Nm-nap8EcjV) - Codevolution, Vishwas Gopinath (YouTube)
 * [Intro to JavaScript ES6 programming](https://www.youtube.com/playlist?list=PL-xu4i_QDSxcoDNeh8rx5-pHCCTOg0XsI)
 * [Intro To JavaScript Unit Testing & BDD](https://www.youtube.com/watch?v=u5cLK1UrFyQ) - Traversy Media
 * [Javascript course](https://www.youtube.com/playlist?list=PLRAV69dS1uWSxUIk5o3vQY2-_VKsOpXLD) - Hitesh Choudhary
@@ -404,22 +401,19 @@
 * [Programming Foundations with Javascript, HTML and CSS](https://www.coursera.org/learn/duke-programming-web) - Owen Astrachan, Robert Duvall, Andrew D. Hilton, Susan H. Rodger (Coursera)
 
 
-#### Angular.js
+#### AngularJS
 
-* [CodeCademy Angular](https://www.codecademy.com/learn/learn-angularjs)
-* [Egghead.io - AngularJS](https://www.youtube.com/playlist?list=PLP6DbQBkn9ymGQh2qpk9ImLHdSH5T7yw7) - John Lindquist
-* [Shaping up with Angular.js](https://www.codeschool.com/courses/shaping-up-with-angular-js)
+> :information_source: See also &#8230; [Angular](#angular)
+
+* [Egghead.io - AngularJS](https://www.youtube.com/playlist?list=PLP6DbQBkn9ymGQh2qpk9ImLHdSH5T7yw7) - John Lindquist (YouTube)
+* [Learn AngularJS 1.X](https://www.codecademy.com/learn/learn-angularjs) - Codecademy (Codecademy account *required*)
+* [Shaping up with Angular.js](https://www.codeschool.com/courses/shaping-up-with-angular-js) - Codeschool (Codeschool account *required*)
 
 
-### D3.js
+#### D3.js
 
 * [D3 101](https://www.youtube.com/playlist?list=PL9yYRbwpkykvjkfuRslECO9c1qTq3GgUb) - Curran Kelleher
 * [Learn D3](https://www.codecademy.com/learn/learn-d3) - Codecademy *(account required)*
-
-
-#### DenoJS
-
-* [Deno Beginner](https://denobeginner.com) - Ahmad Awais - *(email required)*
 
 
 #### jQuery
@@ -437,6 +431,7 @@
 
 * [Beginner's Series to: Node.js](https://youtube.com/playlist?list=PLlrxD0HtieHje-_287YJKhY8tDeSItwtg) - Microsoft Developer (YouTube)
 * [Express JS Crash Course](https://www.youtube.com/watch?v=L72fhGm1tfE) - Brad Traversy, Traversy Media (Youtube)
+* [Node and Express Tutorial](https://www.youtube.com/watch?v=TNV0_7QRDwY) - John Smilga, Coding Addict (YouTube)
 * [Node.js API Development for Beginners](https://www.udemy.com/course/node-js-api-tutorial/) (Udemy)
 * [Node.js Basics](https://www.youtube.com/playlist?list=PLqq-6Pq4lTTa-d0iZg41U2RDqECol9C5B) - Java Brains (Youtube)
 
@@ -738,8 +733,25 @@
 
 ### TypeScript
 
+* [ES6 and Typescript Tutorial](https://www.youtube.com/playlist?list=PLC3y8-rFHvwhI0V5mE9Vu6Nm-nap8EcjV) - Codevolution, Vishwas Gopinath (YouTube)
 * [Introduction to TypeScript](https://www.udemy.com/typescript/) - Daniel Stern (Udemy)
 * [TypeScript Fast Crash Course](https://www.udemy.com/typescript-fast-crash-course/) - Edwin Diaz, Coding Faculty Solutions (Udemy)
+
+
+#### Angular
+
+> :information_source: See also &#8230; [AngularJS](#angularjs)
+
+* [Angular 6 Tutorials](https://www.youtube.com/playlist?list=PLYxzS__5yYQlqCmHqDyW3yo5V79C7eaTe) - codedamn (YouTube)
+* [Angular Courses](https://www.youtube.com/playlist?list=PLTjRvDozrdlxAhsPP4ZYtt3G8KbJ449oT) - Programming with Mosh (YouTube)
+* [Angular Fast Crash Course](https://www.udemy.com/angular-fast-crash-course/) - Edwin Diaz, Coding Faculty Solutions (Udemy)
+* [Angular for Beginners](https://www.udemy.com/course/angular-for-beginners-course/) - Angular University (Udemy)
+* [Angular Tutorial For Beginners](https://www.youtube.com/playlist?list=PLC3y8-rFHvwhBRAgFinJR8KHIrCdTkZcZ) - Codevolution (YouTube)
+
+
+#### Deno
+
+* [Deno Beginner](https://denobeginner.com) - Ahmad Awais (email address *required*)
 
 
 ### Verilog / VHDL / SystemVerilog
