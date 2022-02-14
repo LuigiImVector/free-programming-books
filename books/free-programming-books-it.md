@@ -55,8 +55,8 @@
 
 #### Open source
 
-* [Open Source - online](http://www.apogeonline.com/2002/libri/88-503-1065-X/ebook/pdf/OpenSource.pdf) - N. Bassi (PDF)
 * [Open Source - Analisi di un movimento](http://www.apogeonline.com/2002/libri/88-503-1065-X/ebook/pdf/OpenSource.pdf) - N. Bassi (PDF)
+* [Open Source - online](http://www.apogeonline.com/2002/libri/88-503-1065-X/ebook/pdf/OpenSource.pdf) - N. Bassi (PDF)
 
 
 #### Sistemi
@@ -66,7 +66,7 @@
 
 #### Storia dell'informatica
 
-* [Breve storia dell'informatica] (http://apav.it/informatica_file1.pdf) - F. Eugeni (PDF)
+* [Breve storia dell'informatica](http://apav.it/informatica_file1.pdf) - F. Eugeni (PDF)
 * [Corso di storia dell'informatica](http://nid.dimi.uniud.it/computing_history/computing_history.html) - C. Bonfanti e P. Giangrandi (PDF)
 * [La storia dell'informatica in Mondo Digitale](http://www.aicanet.it/storia-informatica/storia-dell-informatica-in-mondo-digitale) (PDF)
 * [STI: il corso di storia dell'Informatica](https://www.progettohmr.it/Corso/) - G.A. Cignoni (PDF)
@@ -75,10 +75,10 @@
 
 ### Android
 
-* [Aa Android](http://www.html.it/) (HTML)
+* [Aa Android](http://www.html.it) (HTML)
 * [A a Android](http://www.html.it/guide/guida-android/) (HTML)
-* [Guida Android](http://www.html.it/guide/guida-android/) (HTML)
 * [H Android](http://www.html.it/guide/guida-android/) (HTML)
+* [Guida Android](http://www.html.it/guide/guida-android/) (HTML)
 
 
 ### Assembly Language
