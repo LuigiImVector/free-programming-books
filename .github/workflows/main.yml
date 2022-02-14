@@ -1,13 +1,5 @@
 name: Check URLs from changed files
 on: [push, pull_request]
-  workflow_dispatch:
-    inputs:
-      logLevel:
-        description: 'Log level'     
-        required: true
-        default: 'warning'
-      tags:
-        description: 'Test scenario tags'
 jobs:
   job:
     runs-on: ubuntu-latest
