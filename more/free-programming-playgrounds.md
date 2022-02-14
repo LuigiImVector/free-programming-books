@@ -1,6 +1,7 @@
 ### Index
 
 * [APL](#apl)
+* [Assembly](#assembly)
 * [C](#c)
 * [C#](#csharp)
 * [C++](#cpp)
@@ -54,6 +55,11 @@
 * [TryAPL Mini](https://janiczek.github.io/tryapl-elm)
 
 
+### Assembly
+
+* [Educational Visual CPU Simulator](https://github.com/Belotti01/CPU-Visual-Simulator) - Renato Cortinovis, Nicola Preda, Jonathan Cancelli, Alessandro Belotti, Davide Riva (JAVA, JAR)
+
+
 ### <a name="c"></a>C
 
 * [JDoodle - Online C Compiler IDE](https://www.jdoodle.com/c-online-compiler/)
@@ -61,7 +67,7 @@
 * [SoloLearn](https://code.sololearn.com/c)
 
 
-### <a name="csharp"></a>C#
+### <a name="csharp"></a>C\#
 
 * [SoloLearn](https://code.sololearn.com/csharp)
 

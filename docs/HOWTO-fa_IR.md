@@ -1,7 +1,7 @@
-*[این متن را در زبان‌های دیگر بخوانید](../README.md#translations)*
+*[این متن را در زبان‌های دیگر بخوانید](README.md#translations)*
 
 
-<div dir="rtl">
+<div dir="rtl" markdown="1">
 به Free-Programming-Books خوش آمدید! ما به مشارکت‌کنندگان جدید خوش‌آمد می‌گوییم. حتی آنهایی که اولین پول‌ریکوئست خود را در گیت‌هاب ایجاد می کنند. اگر شما هم یکی از آنهایید، منابع زیر می‌توانند به شما کمک کنند.
 
 * [درباره‌ی پول‌ریکوئست](https://help.github.com/articles/about-pull-requests/)
@@ -17,4 +17,4 @@
 در پایان، اگر مطمئن نیستید که منبعی که می‌خواهید اضافه کنید، برای Free-Programming-Books مناسب باشد، راهنماهای [CONTRIBUTING](CONTRIBUTING-fa_IR.md) را بخوانید.
 </div>
 
-([translations](../README.md#translations))
+([translations](README.md#translations))
