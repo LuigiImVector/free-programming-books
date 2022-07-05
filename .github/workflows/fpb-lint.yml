@@ -2,6 +2,10 @@ name: free-programming-books-lint
 
 on: [push, pull_request]
 
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  PR: ${{ github.event.pull_request.html_url }}
+
 jobs:
   build:
 
@@ -18,16 +22,13 @@ jobs:
     - run: fpb-lint ./casts/
     - run: fpb-lint ./courses/
     - run: fpb-lint ./more/
-    - run:
-      - if ${{ success() }}
-        run: |
-          gh pr review -a
-      - if ${{ failure() }}
-        run: |
-          gh pr review -r -b "Linter failed, fix the errors:
+    - run: |
+        if: success();
+        then gh pr review $PR -a
+        
+        if failure();
+        then
+          gh pr review $PR -r -b "Linter failed, fix the errors:
           \`\`\`
           gh run view --log-failed
           \`\`\`" 
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        PR: ${{ github.event.pull_request.html_url }}
