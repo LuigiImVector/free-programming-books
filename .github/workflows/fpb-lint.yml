@@ -26,9 +26,10 @@ jobs:
         gh pr review $PR -a
         if: success() && pullrequest &&
           github.event_name == 'pull_request'
-        
-    - run: |
-        if: failure() && steps.test-app.outcome != 'success'
+
+    - name: Error job
+      if: always()
+      run: |
         gh pr review $PR -r -b "Linter failed, fix the errors:
         \`\`\`
         gh run view --log-failed
