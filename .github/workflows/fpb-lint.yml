@@ -32,4 +32,5 @@ jobs:
           \`\`\`
           gh run view --log-failed
           \`\`\`" 
-        fi
+
+      if: github.event_name == 'pull_request'
