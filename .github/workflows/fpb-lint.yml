@@ -23,14 +23,17 @@ jobs:
     - run: fpb-lint ./courses/
     - run: fpb-lint ./more/
     - run: |
-        if [ success() ];
-        then gh pr review $PR -a
+        - run: |
+          gh pr review $PR -a
+          if: success()
         
-        if [ failure() ];
-        then
+        - run: |
           gh pr review $PR -r -b "Linter failed, fix the errors:
           \`\`\`
           gh run view --log-failed
           \`\`\`" 
+          if: failure()
 
       if: github.event_name == 'pull_request'
+        
+
