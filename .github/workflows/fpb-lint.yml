@@ -4,6 +4,7 @@ on: [push, pull_request]
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GITHUB_RUN_ID: ${{ github.run_id }}
   PR: ${{ github.event.pull_request.html_url }}
 
 jobs:
@@ -32,7 +33,7 @@ jobs:
       run: |
         gh pr review $PR -r -b "Linter failed, fix the errors:
         \`\`\`
-        $(gh run view --log-failed)
+        $(gh run view $GITHUB_RUN_ID --log-failed)
         \`\`\`" 
         if: failure() &&
           github.event_name == 'pull_request'
