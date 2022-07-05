@@ -19,23 +19,24 @@ jobs:
         node-version: '16.x'
     - run: npm install -g free-programming-books-lint
     - run: |
+        if: always()
         fpb-lint ./books/
-        if: always()
     - run: |
+        if: always()
         fpb-lint ./casts/
-        if: always()
     - run: |
+        if: always()
         fpb-lint ./courses/
-        if: always()
     - run: |
-        fpb-lint ./more/
         if: always()
+        fpb-lint ./more/
     - run: |
         gh pr review $PR -a
         if: success() && pullrequest &&
           github.event_name == 'pull_request'
         
     - run: |
+        if: always()
         gh pr review $PR -r -b "Linter failed, fix the errors:
         \`\`\`
         gh run view --log-failed
