@@ -32,3 +32,4 @@ jobs:
           \`\`\`
           gh run view --log-failed
           \`\`\`" 
+        fi
