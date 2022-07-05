@@ -34,3 +34,4 @@ jobs:
         \`\`\`" 
         if: failure() &&
           github.event_name == 'pull_request'
+    if: always()
