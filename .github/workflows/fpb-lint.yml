@@ -18,10 +18,18 @@ jobs:
       with:
         node-version: '16.x'
     - run: npm install -g free-programming-books-lint
-    - run: fpb-lint ./books/
-    - run: fpb-lint ./casts/
-    - run: fpb-lint ./courses/
-    - run: fpb-lint ./more/
+    - run: |
+        fpb-lint ./books/
+        if: always()
+    - run: |
+        fpb-lint ./casts/
+        if: always()
+    - run: |
+        fpb-lint ./courses/
+        if: always()
+    - run: |
+        fpb-lint ./more/
+        if: always()
     - run: |
         gh pr review $PR -a
         if: success() && pullrequest &&
@@ -34,4 +42,3 @@ jobs:
         \`\`\`" 
         if: failure() &&
           github.event_name == 'pull_request'
-    if: always()
