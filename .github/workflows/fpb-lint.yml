@@ -19,23 +19,14 @@ jobs:
       with:
         node-version: '16.x'
     - run: npm install -g free-programming-books-lint
-    - run: fpb-lint ./books/
-    - run: fpb-lint ./casts/
-    - run: fpb-lint ./courses/
-    - run: fpb-lint ./more/
-    env:
-      JOBS_ID: ${{ jobs.id }}
-
-  print:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '16.x'
+    - run: |
+        fpb-lint ./books/ > error-log.txt
+    - run: |
+        fpb-lint ./casts/ > error-log.txt
+    - run: |
+        fpb-lint ./courses/ > error-log.txt
+    - run: | 
+        fpb-lint ./more/ > error-log.txt
 
     - run: |
         gh pr review $PR -a
@@ -49,5 +40,5 @@ jobs:
       run: |
         gh pr review $PR -r -b "Linter failed, fix the errors:
         \`\`\`
-        $(gh run view $GITHUB_RUN_ID -j $JOBS_ID --log-failed)
+        $(cat error-log.txt)
         \`\`\`"
