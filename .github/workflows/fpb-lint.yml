@@ -28,6 +28,6 @@ jobs:
           \`\`\`
           gh run view --log-failed
           \`\`\`" 
-      - env:
+      env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         PR: ${{ github.event.pull_request.html_url }}
