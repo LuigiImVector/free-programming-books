@@ -20,13 +20,13 @@ jobs:
         node-version: '16.x'
     - run: npm install -g free-programming-books-lint
     - run: |
-        fpb-lint ./books/ 2>&1 | tee error-log.txt
+        fpb-lint ./books/ >> error-log.txt
     - run: |
-        fpb-lint ./casts/ 2>&1 | tee error-log.txt
+        fpb-lint ./casts/ >> error-log.txt
     - run: |
-        fpb-lint ./courses/ 2>&1 | tee error-log.txt
+        fpb-lint ./courses/ >> error-log.txt
     - run: | 
-        fpb-lint ./more/ 2>&1 | tee error-log.txt
+        fpb-lint ./more/ >> error-log.txt
 
     - run: |
         gh pr review $PR -a
