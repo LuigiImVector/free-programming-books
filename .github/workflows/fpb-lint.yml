@@ -32,9 +32,9 @@ jobs:
       if: ${{ always() && 
           github.event_name == 'pull_request' }}
       run: |
-        fpb-lint ./books/ &>> output.log
-        fpb-lint ./casts/ &>> output.log
-        fpb-lint ./courses/ &>> output.log
+        fpb-lint ./books/ &>> output.log || echo "Analyzing..."
+        fpb-lint ./casts/ &>> output.log || echo "Analyzing..."
+        fpb-lint ./courses/ &>> output.log || echo "Analyzing..."
         fpb-lint ./more/ &>> output.log || cat output.log
 
         if [ -s output.log ]
