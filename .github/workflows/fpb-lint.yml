@@ -22,17 +22,17 @@ jobs:
     - run: |
         fpb-lint ./books/ 2>&1 | tee output.log
     - run: |
-        fpb-lint ./casts/ 2>&1 | tee output.log
+        fpb-lint ./casts/ > output.log 2>&1 | tee output.log
     - run: |
-        fpb-lint ./courses/ 2>&1 | tee output.log
+        fpb-lint ./courses/ > output.log 2>&1 | tee output.log
     - run: | 
-        fpb-lint ./more/ 2>&1 | tee output.log
+        fpb-lint ./more/ > output.log 2>&1 | tee output.log
       
     - name: Output job
       if: ${{ always() && 
           github.event_name == 'pull_request' }}
       run: |
-        if [ ! -s output.log ]
+        if [ -s output.log ]
         then
           gh pr review $PR -r -b "Linter failed, fix the errors:
           \`\`\`
