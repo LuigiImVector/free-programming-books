@@ -32,19 +32,17 @@ jobs:
       if: ${{ success() && 
         github.event_name == 'pull_request' }}
       run: |
-        if [ ! -s output.log ];
+        if [ ! -s output.log ]
         then:
           gh pr review $PR -a
-        fi
       
     - name: Error job
       if: ${{ always() && 
           github.event_name == 'pull_request' }}
       run: |
-        if [ -s output.log ];
+        if [ -s output.log ]
         then:
           gh pr review $PR -r -b "Linter failed, fix the errors:
           \`\`\`
           $(cat output.log)
           \`\`\`"
-        fi
