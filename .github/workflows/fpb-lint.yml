@@ -32,7 +32,7 @@ jobs:
       if: ${{ always() && 
           github.event_name == 'pull_request' }}
       run: |
-        if [ -s output.log ]
+        if [ ! -s output.log ]
         then
           gh pr review $PR -r -b "Linter failed, fix the errors:
           \`\`\`
