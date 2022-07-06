@@ -27,22 +27,17 @@ jobs:
         fpb-lint ./courses/ 2>&1 | tee output.log
     - run: | 
         fpb-lint ./more/ 2>&1 | tee output.log
-    
-    - name: Approve job
-      if: ${{ success() && 
-        github.event_name == 'pull_request' }}
-      run: |
-        if [ ! -s output.log ]
-        then:
-          gh pr review $PR -a
       
-    - name: Error job
+    - name: Output job
       if: ${{ always() && 
           github.event_name == 'pull_request' }}
       run: |
         if [ -s output.log ]
-        then:
+        then
           gh pr review $PR -r -b "Linter failed, fix the errors:
           \`\`\`
           $(cat output.log)
           \`\`\`"
+        else
+          gh pr review $PR -a
+        fi
