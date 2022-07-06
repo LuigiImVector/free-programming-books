@@ -22,11 +22,11 @@ jobs:
     - run: |
         fpb-lint ./books/ 2>&1 | tee output.log
     - run: |
-        fpb-lint ./casts/ >> output.log 2>&1 | tee output.log
+        fpb-lint ./casts/ 2>> output.log | tee output.log
     - run: |
-        fpb-lint ./courses/ >> output.log 2>&1 | tee output.log
+        fpb-lint ./courses/ 2>> output.log | tee output.log
     - run: | 
-        fpb-lint ./more/ >> output.log 2>&1 | tee output.log
+        fpb-lint ./more/ 2>> output.log | tee output.log
       
     - name: Output job
       if: ${{ always() && 
