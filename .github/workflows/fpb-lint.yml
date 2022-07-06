@@ -20,13 +20,13 @@ jobs:
         node-version: '16.x'
     - run: npm install -g free-programming-books-lint
     - run: |
-        fpb-lint ./books/ 2>>&1 | tee output.log
+        fpb-lint ./books/ 2>&1 | tee output.log
     - run: |
-        fpb-lint ./casts/ 2>>&1 | tee output.log
+        fpb-lint ./casts/ 2>&1 | tee output.log
     - run: |
-        fpb-lint ./courses/ 2>>&1 | tee output.log
+        fpb-lint ./courses/ 2>&1 | tee output.log
     - run: | 
-        fpb-lint ./more/ 2>>&1 | tee output.log
+        fpb-lint ./more/ 2>&1 | tee output.log
     
     - name: Approve job
       if: ${{ success() &&
