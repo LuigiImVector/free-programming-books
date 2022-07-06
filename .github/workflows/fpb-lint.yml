@@ -34,7 +34,7 @@ jobs:
       run: |
         if [ -s output.log ]
         then
-          gh pr review $PR -r -b "Linter failed, fix the errors:
+          gh pr review $PR -r -b "Linter failed, fix the error(s):
           \`\`\`
           $(cat output.log)
           \`\`\`"
