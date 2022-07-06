@@ -28,15 +28,17 @@ jobs:
     - run: | 
         fpb-lint ./more/ 2>> error-log.txt | echo error-log.txt
 
-    - run: |
+    - name: Approve job
+      if: ${{ success() &&
+        github.event_name == 'pull_request' }}
+      run: |
         gh pr review $PR -a
-        if: success() &&
-          github.event_name == 'pull_request'
+        
 
     - name: Error job
-      if: always() &&
+      if: ${{ always() &&
         failure() &&
-          github.event_name == 'pull_request'
+          github.event_name == 'pull_request' }}
       run: |
         gh pr review $PR -r -b "Linter failed, fix the errors:
         \`\`\`
