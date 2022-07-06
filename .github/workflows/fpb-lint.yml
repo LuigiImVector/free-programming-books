@@ -20,13 +20,13 @@ jobs:
         node-version: '16.x'
     - run: npm install -g free-programming-books-lint
     - run: |
-        fpb-lint ./books/ 2>>error-log.log | tee -a error-log.log
+        fpb-lint ./books/ 2>>error-log.log | echo error-log.log
     - run: |
-        fpb-lint ./casts/ 2>>error-log.log | tee -a error-log.log
+        fpb-lint ./casts/ 2>>error-log.log | echo error-log.log
     - run: |
-        fpb-lint ./courses/ 2>>error-log.log | tee -a error-log.log
+        fpb-lint ./courses/ 2>>error-log.log | echo error-log.log
     - run: | 
-        fpb-lint ./more/ 2>>error-log.log | tee -a error-log.log
+        fpb-lint ./more/ 2>>error-log.log | echo error-log.log
 
     - name: Approve PR
       if: success() && 
