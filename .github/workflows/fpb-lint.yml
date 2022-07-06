@@ -20,7 +20,7 @@ jobs:
         node-version: '16.x'
     - run: npm install -g free-programming-books-lint
     - run: |
-        fpb-lint ./books/ >> output.log 2>> output.log && cat output.log
+        fpb-lint ./books/ >> output.log 2>> output.log | cat output.log
     - run: |
         fpb-lint ./casts/ &>> output.log | cat output.log
     - run: |
