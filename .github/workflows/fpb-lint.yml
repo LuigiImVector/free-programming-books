@@ -14,6 +14,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
     - name: Use Node.js
       uses: actions/setup-node@v3
       with:
@@ -32,16 +35,19 @@ jobs:
       if: ${{ always() && 
           github.event_name == 'pull_request' }}
       run: |
-        fpb-lint ./books/ &>> output.log
-        fpb-lint ./casts/ &>> output.log
-        fpb-lint ./courses/ &>> output.log
-        fpb-lint ./more/ &>> output.log || cat output.log
+        fpb-lint ./books/ &>> output.log || echo "Analyzing..."
+        fpb-lint ./casts/ &>> output.log || echo "Analyzing..."
+        fpb-lint ./courses/ &>> output.log || echo "Analyzing..."
+        fpb-lint ./more/ &>> output.log || echo "Analyzing..."
 
-        if [ -s output.log ]
+        python clean-output.py
+        cat error.log
+
+        if [ -s error.log ]
         then
           gh pr review $PR -r -b "Linter failed, fix the error(s):
           \`\`\`
-          $(cat output.log)
+          $(cat error.log)
           \`\`\`"
           gh pr edit $PR --add-label "linter error"
         else
