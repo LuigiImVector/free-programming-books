@@ -20,21 +20,20 @@ jobs:
         node-version: '16.x'
     - run: npm install -g free-programming-books-lint
     - run: |
-        fpb-lint ./books/ 2>> error-log.txt | echo error-log.txt
+        fpb-lint ./books/ 2>> error-log.txt | cat error-log.txt
     - run: |
-        fpb-lint ./casts/ 2>> error-log.txt | echo error-log.txt
+        fpb-lint ./casts/ 2>> error-log.txt | cat error-log.txt
     - run: |
-        fpb-lint ./courses/ 2>> error-log.txt | echo error-log.txt
+        fpb-lint ./courses/ 2>> error-log.txt | cat error-log.txt
     - run: | 
-        fpb-lint ./more/ 2>> error-log.txt | echo error-log.txt
-
+        fpb-lint ./more/ 2>> error-log.txt | cat error-log.txt
+    
     - name: Approve job
       if: ${{ success() &&
         github.event_name == 'pull_request' }}
       run: |
         gh pr review $PR -a
-        
-
+      
     - name: Error job
       if: ${{ always() &&
         failure() &&
