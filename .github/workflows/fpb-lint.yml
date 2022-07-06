@@ -2,6 +2,11 @@ name: free-programming-books-lint
 
 on: [push, pull_request]
 
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GITHUB_RUN_ID: ${{ github.run_id }}
+  PR: ${{ github.event.pull_request.html_url }}
+
 jobs:
   build:
 
@@ -14,7 +19,25 @@ jobs:
       with:
         node-version: '16.x'
     - run: npm install -g free-programming-books-lint
-    - run: fpb-lint ./books/
-    - run: fpb-lint ./casts/
-    - run: fpb-lint ./courses/
-    - run: fpb-lint ./more/
+    - run: |
+        fpb-lint ./books/ &>> output.log || cat output.log
+    - run: |
+        fpb-lint ./casts/ &>> output.log || cat output.log
+    - run: |
+        fpb-lint ./courses/ &>> output.log || cat output.log
+    - run: | 
+        fpb-lint ./more/ &>> output.log || cat output.log
+      
+    - name: Output job
+      if: ${{ always() && 
+          github.event_name == 'pull_request' }}
+      run: |
+        if [ -s output.log ]
+        then
+          gh pr review $PR -r -b "Linter failed, fix the errors:
+          \`\`\`
+          $(cat output.log)
+          \`\`\`"
+        else
+          gh pr review $PR -a
+        fi
