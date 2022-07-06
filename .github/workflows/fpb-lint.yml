@@ -28,11 +28,10 @@ jobs:
     - run: | 
         fpb-lint ./more/ 2>> error-log.txt | echo error-log.txt
 
-    - name: Approve PR
-      if: success() && 
-          github.event_name == 'pull_request'
-      run: |
+    - run: |
         gh pr review $PR -a
+        if: success() &&
+          github.event_name == 'pull_request'
 
     - name: Error job
       if: always() &&
