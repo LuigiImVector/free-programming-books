@@ -38,6 +38,8 @@ jobs:
           \`\`\`
           $(cat output.log)
           \`\`\`"
+          gh pr edit $PR --add-label "linter error"
         else
           gh pr review $PR -a
+          gh pr edit $PR --remove-label "linter error"
         fi
