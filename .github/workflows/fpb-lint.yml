@@ -14,7 +14,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - uses: actions/setup-python@v4
+    - name: Use Python
+      uses: actions/setup-python@v4
       with:
         python-version: '3.x'
     - name: Use Node.js
@@ -40,7 +41,7 @@ jobs:
         fpb-lint ./courses/ &>> output.log || echo "Analyzing..."
         fpb-lint ./more/ &>> output.log || echo "Analyzing..."
 
-        python clean-output.py
+        python ./.github/workflows/clean-output.py
         cat error.log
 
         if [ -s error.log ]
