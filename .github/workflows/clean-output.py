@@ -5,7 +5,9 @@ with open('output.log') as oldfile, open('error.log', 'w') as newfile:
         if not (b'\xc3\xa2\xc5\xa1\xc2\xa0' in line.encode()):
             if ('warning' in line):
                 print(line)
-                r = re.search('warning (.+?) remark', line).group(1)
+                r = re.search('warning(.+?)remark', line)
+                print(r)
+                r = r.group(1)
                 s = str(r).rsplit(' ', 1)[0]
                 newfile.write(s)
             if ('home/runner/work' in line):
