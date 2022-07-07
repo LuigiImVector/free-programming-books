@@ -4,11 +4,16 @@ with open('output.log') as oldfile, open('error.log', 'w') as newfile:
     for line in oldfile:
         if not (b'\xc3\xa2\xc5\xa1\xc2\xa0' in line.encode()):
             if ('warning' in line):
-                print(line)
-                r = re.search('warning(.+?)remark', line)
-                print(r)
-                r = r.group(1)
-                s = str(r).rsplit(' ', 1)[0]
+                #print(line)
+                #r = re.search('warning(.+?)remark', line)
+                #print(r)
+                #r = r.group(1)
+                #s = str(r).rsplit(' ', 1)[0]
+                
+
+                r = line.partition("warning")[2].partition("remark")[0]
+                s = str(r).rsplit('  ', 1)[0]
+                
                 newfile.write(s)
             if ('home/runner/work' in line):
                 s = line.replace("/home/runner/work/free-programming-books/", "", 1)
