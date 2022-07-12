@@ -18,6 +18,8 @@ jobs:
       uses: actions/setup-python@v4
       with:
         python-version: '3.x'
+    - name: Use Github Script
+      uses: actions/github-script@v6
     - name: Use Node.js
       uses: actions/setup-node@v3
       with:
@@ -41,7 +43,32 @@ jobs:
         fpb-lint ./courses/ &>> output.log || echo "Analyzing..."
         fpb-lint ./more/ &>> output.log || echo "Analyzing..."
 
-        python ./.github/workflows/clean-output.py
+    - name: Clean output
+      if: ${{ always() && 
+          github.event_name == 'pull_request' }}
+      with:
+        script: |
+          const fs = require('fs');
+          const readline = require('readline');
+          
+          const file = readline.createInterface({
+              input: fs.createReadStream('output.log'),
+              output: process.stdout,
+              terminal: false
+          });
+
+          file.on('line', (line) => {
+              if (line.includes('/home/runner/work/free-programming-books/')) {
+                fs.writeFile('error.log', line.replace('/home/runner/work/free-programming-books/', ''));
+              } else if (line.includes('\u26a0')) {
+                fs.writeFile('error.log', '\n\n');
+              }
+          });
+    
+    - name: Print output
+      if: ${{ always() && 
+          github.event_name == 'pull_request' }}
+      run: |
         cat error.log
 
         if [ -s error.log ]
