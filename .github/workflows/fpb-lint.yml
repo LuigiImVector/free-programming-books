@@ -61,7 +61,7 @@ jobs:
           file.on('line', (line) => {
               console.log(line);
               if (line.includes('/home/runner/work/free-programming-books/')) {
-                fs.appendFile('error.log', line.replace('/home/runner/work/free-programming-books/', ''), err => {
+                fs.appendFile('error.log', line.replace('/home/runner/work/free-programming-books/', '') + "\r\n", err => {
                   if (err) {
                     console.error(err);
                   }
@@ -73,7 +73,7 @@ jobs:
                   }
                 });
               } else {
-                fs.appendFile('error.log', line, err => {
+                fs.appendFile('error.log', line + "<br />", err => {
                   if (err) {
                     console.error(err);
                   }
