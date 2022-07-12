@@ -79,22 +79,12 @@ jobs:
                 });
               }
           });
-
-          file.on('close', (line) => {
-              if (line == "\r\n\r\n") {
-                fs.appendFile('error.log', line.replace('\r\n\r\n', ''), err => {
-                  if (err) {
-                    console.error(err);
-                  }
-                });
-              }
-          });
     
     - name: Print output
       if: ${{ always() && 
           github.event_name == 'pull_request' }}
       run: |
-        cat error.log
+        sed ':a;N;$!ba;s/\n/ /g' error.log # ignore newlines at the eof
 
         if [ -s error.log ]
         then
