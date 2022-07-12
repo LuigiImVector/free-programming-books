@@ -86,7 +86,7 @@ jobs:
       run: |
          # ignore newlines at the eof
          cp error.log tmp.log
-         sed ':a;N;$!ba;s/\r\n/ /g' tmp.log &> error.log
+         awk '/^$/ {nlstack=nlstack "\n";next;} {printf "%s",nlstack; nlstack=""; print;}' tmp.log &> error.log
          cat error.log
 
           if [ -s error.log ]
