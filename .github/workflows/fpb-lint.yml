@@ -59,7 +59,6 @@ jobs:
           });
 
           file.on('line', (line) => {
-              console.log(line);
               if (line.includes('/home/runner/work/free-programming-books/')) {
                 fs.appendFile('error.log', line.replace('/home/runner/work/free-programming-books/', '') + "\r\n", err => {
                   if (err) {
@@ -72,7 +71,7 @@ jobs:
                     console.error(err);
                   }
                 });
-              } else {
+              } else if (line != '\r\n') {
                 fs.appendFile('error.log', line + "\r\n", err => {
                   if (err) {
                     console.error(err);
@@ -86,6 +85,7 @@ jobs:
           github.event_name == 'pull_request' }}
       run: |
          # ignore newlines at the eof
+         cat error.log
          cp error.log tmp.log
          awk '/^$/ {nlstack=nlstack "\n";next;} {printf "%s",nlstack; nlstack=""; print;}' tmp.log &> error.log
          cat error.log
