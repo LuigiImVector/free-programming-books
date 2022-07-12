@@ -84,16 +84,19 @@ jobs:
       if: ${{ always() && 
           github.event_name == 'pull_request' }}
       run: |
-        sed ':a;N;$!ba;s/\n/ /g' error.log # ignore newlines at the eof
+         # ignore newlines at the eof
+         cp error.log tmp.log
+         sed ':a;N;$!ba;s/\n/ /g' tmp.log &> error.log
+         cat error.log
 
-        if [ -s error.log ]
-        then
-          gh pr review $PR -r -b "Linter failed, fix the error(s):
-          \`\`\`
-          $(cat error.log)
-          \`\`\`"
-          gh pr edit $PR --add-label "linter error"
-        else
-          gh pr review $PR -a
-          gh pr edit $PR --remove-label "linter error"
-        fi
+          if [ -s error.log ]
+          then
+            gh pr review $PR -r -b "Linter failed, fix the error(s):
+            \`\`\`
+            $(cat error.log)
+            \`\`\`"
+            gh pr edit $PR --add-label "linter error"
+          else
+            gh pr review $PR -a
+            gh pr edit $PR --remove-label "linter error"
+          fi
