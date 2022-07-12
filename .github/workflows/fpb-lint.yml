@@ -61,19 +61,19 @@ jobs:
           file.on('line', (line) => {
               console.log(line);
               if (line.includes('/home/runner/work/free-programming-books/')) {
-                fs.writeFile('error.log', line.replace('/home/runner/work/free-programming-books/', ''), err => {
+                fs.appendFile('error.log', line.replace('/home/runner/work/free-programming-books/', ''), err => {
                   if (err) {
                     console.error(err);
                   }
                 });
               } else if (line.includes('\u26a0')) {
-                fs.writeFile('error.log', '\n\n', err => {
+                fs.appendFile('error.log', '\n\n', err => {
                   if (err) {
                     console.error(err);
                   }
                 });
               } else {
-                fs.writeFile('error.log', line, err => {
+                fs.appendFile('error.log', line, err => {
                   if (err) {
                     console.error(err);
                   }
