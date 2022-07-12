@@ -59,12 +59,13 @@ jobs:
           });
 
           file.on('line', (line) => {
+              console.log(line);
               if (line.includes('/home/runner/work/free-programming-books/')) {
                 fs.writeFileSync('error.log', line.replace('/home/runner/work/free-programming-books/', ''));
               } else if (line.includes('\u26a0')) {
                 fs.writeFileSync('error.log', '\n\n');
               } else {
-                fs.writeFileSync('error.log', line)
+                fs.writeFileSync('error.log', line);
               }
           });
     
