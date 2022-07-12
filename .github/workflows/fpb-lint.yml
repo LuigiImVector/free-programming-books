@@ -59,7 +59,6 @@ jobs:
           });
 
           file.on('line', (line) => {
-              console.log(line);
               if (line.includes('/home/runner/work/free-programming-books/')) {
                 fs.appendFile('error.log', line.replace('/home/runner/work/free-programming-books/', '') + "\r\n", err => {
                   if (err) {
@@ -74,6 +73,16 @@ jobs:
                 });
               } else {
                 fs.appendFile('error.log', line + "\r\n", err => {
+                  if (err) {
+                    console.error(err);
+                  }
+                });
+              }
+          });
+
+          file.on('close', (line) => {
+              if (line == "\r\n\r\n") {
+                fs.appendFile('error.log', line.replace('\r\n\r\n', ''), err => {
                   if (err) {
                     console.error(err);
                   }
