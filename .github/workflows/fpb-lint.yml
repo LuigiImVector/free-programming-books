@@ -41,6 +41,8 @@ jobs:
         fpb-lint ./courses/ &>> output.log || echo "Analyzing..."
         fpb-lint ./more/ &>> output.log || echo "Analyzing..."
 
+        cat > error.log
+
     - name: Clean output
       if: ${{ always() && 
           github.event_name == 'pull_request' }}
@@ -58,9 +60,11 @@ jobs:
 
           file.on('line', (line) => {
               if (line.includes('/home/runner/work/free-programming-books/')) {
-                fs.writeFile('error.log', line.replace('/home/runner/work/free-programming-books/', ''));
+                fs.writeFileSync('error.log', line.replace('/home/runner/work/free-programming-books/', ''));
               } else if (line.includes('\u26a0')) {
-                fs.writeFile('error.log', '\n\n');
+                fs.writeFileSync('error.log', '\n\n');
+              } else {
+                fs.writeFileSync('error.log', line)
               }
           });
     
