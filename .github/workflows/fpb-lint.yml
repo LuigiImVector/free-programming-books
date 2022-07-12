@@ -86,7 +86,7 @@ jobs:
       run: |
          # ignore newlines at the eof
          cp error.log tmp.log
-         sed ':a;N;$!ba;s/\n/ /g' tmp.log &> error.log
+         sed ':a;N;$!ba;s/\r\n/ /g' tmp.log &> error.log
          cat error.log
 
           if [ -s error.log ]
