@@ -71,7 +71,7 @@ jobs:
                     console.error(err);
                   }
                 });
-              } else if (line != '\r\n') {
+              } else if (line != '\n') {
                 fs.appendFile('error.log', line + "\r\n", err => {
                   if (err) {
                     console.error(err);
@@ -87,7 +87,7 @@ jobs:
          # ignore newlines at the eof
          cat error.log
          cp error.log tmp.log
-         awk '/^$/ {nlstack=nlstack "\n";next;} {printf "%s",nlstack; nlstack=""; print;}' tmp.log &> error.log
+         awk '/^$/ {nlstack=nlstack "\r\n";next;} {printf "%s",nlstack; nlstack=""; print;}' tmp.log &> error.log
          cat error.log
 
           if [ -s error.log ]
