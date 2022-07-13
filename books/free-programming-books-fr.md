@@ -64,13 +64,13 @@
 * [Complexité algorithmique](http://www.liafa.univ-paris-diderot.fr/~sperifel/livre_complexite.html) - Sylvain Perifel
 * [Éléments d'algorithmique](http://www-igm.univ-mlv.fr/~berstel/Elements/Elements.pdf) - D. Beauquier, J. Berstel, et Ph. Chrétienne (PDF)
 * [France-IOI](http://www.france-ioi.org)
-* [Prologin](https://prologin.org)
+* [Prologin](https://prologin.org/)
 
 
 #### Logiciels libres
 
 * [Histoires et cultures du Libre](http://framabook.org/histoiresetculturesdulibre/)
-* [Option libre. Du bon usage des licences libres](http://framabook.org/optionlibre-dubonusagedeslicenceslibres/) - Jean Benjamin
+* [AOption libre. Du bon usage des licences libres](http://framabook.org/optionlibre-dubonusagedeslicenceslibres/) - Jean Benjamin
 * [Produire du logiciel libre](http://framabook.org/produire-du-logiciel-libre-2/) - Karl Fogel
 * [Richard Stallman et la révolution du logiciel libre](http://framabook.org/richard-stallman-et-la-revolution-du-logiciel-libre-2/) - R.M. Stallman, S. Williams et C. Masutti
 
