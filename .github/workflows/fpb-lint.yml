@@ -57,7 +57,8 @@ jobs:
               output: process.stdout,
               terminal: false
           });
-          
+
+          let lastLine = '';
           file.on('line', (line) => {
             if (lastLine) {
               fs.appendFile('output.log', lastLine, (err) => {
