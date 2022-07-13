@@ -72,6 +72,7 @@ jobs:
                   }
                 });
               } else if (line != '\n') {
+                console.log(line)
                 fs.appendFile('error.log', line + "\r\n", err => {
                   if (err) {
                     console.error(err);
@@ -84,12 +85,8 @@ jobs:
       if: ${{ always() && 
           github.event_name == 'pull_request' }}
       run: |
-         # ignore newlines at the eof
-         cat error.log
-         cp error.log tmp.log
-         awk '/^$/ {nlstack=nlstack "\r\n";next;} {printf "%s",nlstack; nlstack=""; print;}' tmp.log &> error.log
-         cat error.log
-
+          cat error.log
+          
           if [ -s error.log ]
           then
             gh pr review $PR -r -b "Linter failed, fix the error(s):
