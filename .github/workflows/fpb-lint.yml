@@ -86,7 +86,7 @@ jobs:
       if: ${{ always() && 
           github.event_name == 'pull_request' }}
       run: |
-          mkdir -P ./PR
+          mkdir -p ./PR
           echo ${{ github.event.pull_request.html_url }} > ./pr/PRurl
           mv error.log ./PR/error.log
     - uses: actions/upload-artifact@v3
