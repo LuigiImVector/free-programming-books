@@ -9,6 +9,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+<<<<<<< HEAD
+=======
+    - name: Use Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+>>>>>>> cd1d5e81ee74b761220880d2f23283bd69bfeff5
     - name: Use Node.js
       uses: actions/setup-node@v3
       with:
@@ -32,7 +39,11 @@ jobs:
         fpb-lint ./courses/ &>> output.log || echo "Analyzing..."
         fpb-lint ./more/ &>> output.log || echo "Analyzing..."
 
+<<<<<<< HEAD
         touch error.log
+=======
+        cat > error.log
+>>>>>>> cd1d5e81ee74b761220880d2f23283bd69bfeff5
 
     - name: Clean output
       if: ${{ always() && 
@@ -86,6 +97,7 @@ jobs:
       if: ${{ always() && 
           github.event_name == 'pull_request' }}
       run: |
+<<<<<<< HEAD
           mkdir -P ./PR
           echo ${{ github.event.pull_request.html_url }} > ./pr/PRurl
           mv error.log ./PR/error.log
@@ -93,3 +105,18 @@ jobs:
       with:
         name: pr
         path: pr/
+=======
+          cat error.log
+
+          if [ -s error.log ]
+          then
+            gh pr review $PR -r -b "Linter failed, fix the error(s):
+            \`\`\`
+            $(cat error.log)
+            \`\`\`"
+            gh pr edit $PR --add-label "linter error"
+          else
+            gh pr review $PR -a
+            gh pr edit $PR --remove-label "linter error"
+          fi
+>>>>>>> cd1d5e81ee74b761220880d2f23283bd69bfeff5
