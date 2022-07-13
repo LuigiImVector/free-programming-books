@@ -51,34 +51,42 @@ jobs:
         script: |
           const fs = require('fs');
           const readline = require('readline');
-
+          
           const file = readline.createInterface({
               input: fs.createReadStream('output.log'),
               output: process.stdout,
               terminal: false
           });
 
+          let lastLine;
           file.on('line', (line) => {
-              if (line.includes('/home/runner/work/free-programming-books/')) {
-                fs.appendFile('error.log', line.replace('/home/runner/work/free-programming-books/', '') + "\r\n", err => {
-                  if (err) {
-                    console.error(err);
-                  }
-                });
-              } else if (line.includes('\u26a0')) {
-                fs.appendFile('error.log', '\r\n\r\n', err => {
-                  if (err) {
-                    console.error(err);
-                  }
-                });
-              } else if (line != '\n') {
-                console.log(line)
-                fs.appendFile('error.log', line + "\r\n", err => {
-                  if (err) {
-                    console.error(err);
-                  }
-                });
+            if (lastLine) {
+              fs.appendFile('error.log', lastLine, (err) => {
+                if (err) {
+                  console.error(err);
+                }
+              });
+            }
+
+            if (lastLine.includes('\u26a0')) {
+              console.log(line);
+              lastLine = '\r\n\r\n';
+            } else if (lastLine.includes('remark-lint')) {
+              console.log(line);
+              lastLine = line + '\r\n';
+            }
+          });
+          
+          file.on('close', () => {
+            if (lastLine === '\r\n\r\n') {
+              return;
+            }
+
+            fs.appendFile('error.log', lastLine, (err) => {
+              if (err) {
+                console.error(err);
               }
+            });
           });
     
     - name: Print output
@@ -86,7 +94,7 @@ jobs:
           github.event_name == 'pull_request' }}
       run: |
           cat error.log
-          
+
           if [ -s error.log ]
           then
             gh pr review $PR -r -b "Linter failed, fix the error(s):
