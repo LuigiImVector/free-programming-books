@@ -248,7 +248,7 @@ That section got so big, we decided to split it into its own file, the [BY SUBJE
 ### Agda
 
 * [Agda Tutorial](http://people.inf.elte.hu/divip/AgdaTutorial/Index.html)
-* [Programming Language Foundations in Agda](https://plfa.github.io) - Philip Wadler and Wen Kokke
+* [Programming Language Foundations in Agda](https://plfa.github.io/) - Philip Wadler and Wen Kokke
 
 
 ### Alef
@@ -374,7 +374,6 @@ That section got so big, we decided to split it into its own file, the [BY SUBJE
 * [Awk](https://www.grymoire.com/Unix/Awk.html) - Bruce Barnett
 * [Gawk: Effective AWK Programming](https://www.gnu.org/software/gawk/manual) - Arnold D. Robbins (HTML, PDF)
 * [GNU awk](https://learnbyexample.github.io/learn_gnuawk/) - Sundeep Agarwal
-
 
 ### Bash
 
