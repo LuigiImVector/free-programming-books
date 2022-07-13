@@ -51,38 +51,37 @@ jobs:
         script: |
           const fs = require('fs');
           const readline = require('readline');
-          
+
           const file = readline.createInterface({
               input: fs.createReadStream('output.log'),
               output: process.stdout,
               terminal: false
           });
-
-          let lastLine;
+          
           file.on('line', (line) => {
             if (lastLine) {
-              fs.appendFile('error.log', lastLine, (err) => {
+              fs.appendFile('output.log', lastLine, (err) => {
                 if (err) {
                   console.error(err);
                 }
               });
             }
 
-            if (lastLine.includes('\u26a0')) {
+            if (line.includes('warning')) {
               console.log(line);
               lastLine = '\r\n\r\n';
-            } else if (lastLine.includes('remark-lint')) {
+            } else if (line.includes('error')) {
               console.log(line);
               lastLine = line + '\r\n';
             }
           });
-          
+
           file.on('close', () => {
             if (lastLine === '\r\n\r\n') {
               return;
             }
 
-            fs.appendFile('error.log', lastLine, (err) => {
+            fs.appendFile('output.log', lastLine, (err) => {
               if (err) {
                 console.error(err);
               }
