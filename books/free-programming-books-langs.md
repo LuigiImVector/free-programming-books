@@ -247,7 +247,7 @@ That section got so big, we decided to split it into its own file, the [BY SUBJE
 </details>
 
 
-### Agda <a href="#index">:arrow_heading_up</a>
+### Agda <a href="#index">:arrow_heading_up:</a>
 
 * [Agda Tutorial](http://people.inf.elte.hu/divip/AgdaTutorial/Index.html)
 * [Programming Language Foundations in Agda](https://plfa.github.io) - Philip Wadler and Wen Kokke
