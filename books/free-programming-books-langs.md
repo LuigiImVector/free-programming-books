@@ -230,11 +230,12 @@ That section got so big, we decided to split it into its own file, the [BY SUBJE
 
 ### ABAP
 
+<a href="#index">`^ back to top ^`</a>
 * [SAP Code Style Guides - Clean ABAP](https://github.com/SAP/styleguides/blob/master/clean-abap/CleanABAP.md)
 
 
 ### Ada
-
+<details><summary> :arrow_down: Expand/Collapse </summary>
 * [A Guide to Ada for C and C++ Programmers](http://www.cs.uni.edu/~mccormic/4740/guide-c2ada.pdf) (PDF)
 * [Ada Distilled](http://www.adapower.com/pdfs/AdaDistilled07-27-2003.pdf) (PDF)
 * [Ada for the C++ or Java Developer](https://www.adacore.com/uploads/books/pdf/Ada_for_the_C_or_Java_Developer-cc.pdf) - Quentin Ochem (PDF)
@@ -243,9 +244,10 @@ That section got so big, we decided to split it into its own file, the [BY SUBJE
 * [Introduction To Ada](https://learn.adacore.com/courses/intro-to-ada/index.html)
 * [Introduction To SPARK](https://learn.adacore.com/courses/SPARK_for_the_MISRA_C_Developer/index.html)
 * [The Big Online Book of Linux Ada Programming](http://www.pegasoft.ca/resources/boblap/book.html)
+</details>
 
 
-### Agda
+### Agda <a href="#index">:arrow_heading_up</a>
 
 * [Agda Tutorial](http://people.inf.elte.hu/divip/AgdaTutorial/Index.html)
 * [Programming Language Foundations in Agda](https://plfa.github.io) - Philip Wadler and Wen Kokke
