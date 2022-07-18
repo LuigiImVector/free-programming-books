@@ -1,0 +1,38 @@
+name: Check all URLs
+on: [workflow_dispatch]
+jobs:
+  job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Fetch action
+        id: pl
+        uses: Rishabh510/Path-lister-action@master
+        with:
+          path: $DIRECTORY
+          type: ".md"
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.6
+      - run: gem install awesome_bot
+      - name: Check books
+        env:
+          DIRECTORY: "books/"
+        run: | 
+          echo "Found ${{ steps.pl.outputs.path_count }} file(s) with this extension:"
+          for i in ${{ steps.pl.outputs.paths }}; do
+          echo "processing $i";
+          awesome_bot $i --allow-redirect --allow-dupe --allow-ssl || true;
+          done
+      - name: Check courses
+        env:
+          DIRECTORY: "courses/"
+        run: | 
+          echo "Found ${{ steps.pl.outputs.path_count }} file(s) with this extension:"
+          for i in ${{ steps.pl.outputs.paths }}; do
+          echo "processing $i";
+          awesome_bot $i --allow-redirect --allow-dupe --allow-ssl || true;
+          done
+      - uses: actions/upload-artifact@v3
+        with:
+          path: ${{ github.workspace }}/*.json
