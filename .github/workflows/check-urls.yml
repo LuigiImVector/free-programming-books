@@ -1,5 +1,5 @@
 name: Check all URLs
-on: [workflow_dispatch]
+on: [push]
 jobs:
   job:
     runs-on: ubuntu-latest
